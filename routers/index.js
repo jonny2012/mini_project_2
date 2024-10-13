@@ -15,6 +15,10 @@ router.post('/post', checkAuth, PostController.createPost)
 router.get("/post", PostController.getAllPosts)
 
 
-router.post("/product", ProductsController.createProduct)
+router.post("/product", checkAuth, ProductsController.createProduct)
 router.get("/product", ProductsController.findAllProducts)
+router.put("/product:id", ProductsController.updateProductInBasket)
+router.delete("/product:id", ProductsController.deleteProductInBasket)
+
+
 router.get("/basket", BasketController.findAllBaskets )

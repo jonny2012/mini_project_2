@@ -1,4 +1,4 @@
-import { Basket } from "../models/ProductModel.js";
+import { Basket, Product } from "../models/ProductModel.js";
 
 
 class BasketController{
@@ -7,5 +7,7 @@ class BasketController{
 
         const allBaskets = await Basket.find().populate("products")
     }
+
+
 }
 export default  new BasketController()
